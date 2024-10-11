@@ -1,0 +1,95 @@
+:root {
+    --borda-da-tecla: 8px;
+    --branco-sombreado: rgb(224, 224, 224);
+    --marron: rgb(105, 60, 39);
+    --preto: rgb(32, 32, 32);
+    --preto-sombreado: rgb(24, 24, 24);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.piano {
+    background-color: var(--marron);
+    border-radius: 16px;
+    color: white;
+    height: 384px;
+    width: 1024px;
+}
+
+header, main, .teclas {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2 {
+    margin: 32px;
+}
+
+.controle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 32px;
+}
+
+#volume {
+    accent-color: var(--marron);
+    background-color: var(--marron);
+}
+
+#volume::-moz-range-track {
+    background-color: white;    
+}
+
+#volume::-webkit-slider-runnable-track {
+    background-color: white;    
+}
+
+label {
+    margin: 4px;
+}
+
+input {
+    margin: 4px;
+}
+
+.teclas {
+    position: relative;
+}
+
+.tecla-branca {
+    background-color: white;
+    border-radius: var(--borda-da-tecla);
+    cursor: pointer;
+    height: 224px;
+    margin: 8px;
+    width: 56px;
+}
+
+.tecla-branca:active {
+    background-color: var(--branco-sombreado);
+}
+
+.tecla-preta {
+    background-color: var(--preto);
+    border-radius: 0px 0px var(--borda-da-tecla) var(--borda-da-tecla);
+    cursor: pointer;
+    height: 168px;
+    position: absolute;
+    top: 8px;
+    width: 42px;
+}
+
+.tecla-preta:active {
+    background-color: var(--preto-sombreado);
+}
