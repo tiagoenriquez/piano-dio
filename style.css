@@ -85,11 +85,30 @@ input {
     border-radius: 0px 0px var(--borda-da-tecla) var(--borda-da-tecla);
     cursor: pointer;
     height: 168px;
-    position: absolute;
-    top: 8px;
+    margin: 6px 15px;
     width: 42px;
 }
 
 .tecla-preta:active {
     background-color: var(--preto-sombreado);
+}
+
+.tecla-inexistente {
+    background: transparent;
+    height: 168px;
+    margin: 6px 15px;
+    width: 42px;
+}
+
+.teclas-brancas {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.teclas-pretas {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 36px;
 }
